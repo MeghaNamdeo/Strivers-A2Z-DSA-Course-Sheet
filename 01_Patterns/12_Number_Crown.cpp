@@ -1,4 +1,12 @@
+Example:
+Input: ‘N’ = 3
 
+Output: 
+
+1         1
+1 2     2 1
+1 2 3 3 2 1
+ 
  void numberCrown(int n) {
      int space= 2*n -2;
     for(int i = 1 ; i <= n ; i++)
