@@ -1,3 +1,10 @@
+Example:
+Input: ‘N’ = 3
+
+Output: 
+* * *
+* *
+*
 void seeding(int n) {
 	for (int i = 1 ; i <= n ; i++)
 	{
