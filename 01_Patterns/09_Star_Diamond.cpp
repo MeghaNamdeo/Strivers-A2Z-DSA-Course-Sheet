@@ -1,3 +1,15 @@
+Example:
+Input: ‘N’ = 3
+
+Output: 
+
+  *
+ ***
+*****
+*****
+ ***
+  *
+
 void nStarDiamond(int n) {
    for(int i  = 0 ; i < n ; i++)
    {
