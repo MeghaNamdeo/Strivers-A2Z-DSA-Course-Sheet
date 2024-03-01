@@ -1,3 +1,11 @@
+Example:
+Input: ‘N’ = 3
+
+Output: 
+
+1
+0 1
+1 0 1
 void nBinaryTriangle(int n) {
     for(int i = 0 ; i < n ; i++)
     {
