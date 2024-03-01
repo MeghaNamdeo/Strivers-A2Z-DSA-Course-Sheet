@@ -1,3 +1,10 @@
+Input: ‘N’ = 3
+
+Output: 
+
+1 2 3
+1 2
+1
 void nNumberTriangle(int n) {
     // Write your code here
     for (int i = 1 ; i <= n ; i++)
