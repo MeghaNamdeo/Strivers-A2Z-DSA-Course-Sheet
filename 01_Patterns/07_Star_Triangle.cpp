@@ -1,3 +1,11 @@
+Example:
+Input: ‘N’ = 3
+
+Output: 
+
+  *
+ ***
+*****
 void nStarTriangle(int n) {
     //for rows 
     for(int i = 0 ; i < n ; i++)
