@@ -14,3 +14,4 @@ int isSorted(int n, vector<int> a) {
     
 }
 //T C = O(n)
+// loop n-2 tk isliy chala kyu i+1 ki bahar nikl jayga
