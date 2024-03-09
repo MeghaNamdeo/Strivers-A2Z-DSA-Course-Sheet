@@ -1,3 +1,7 @@
+
+
+/* lower bound : smallest index such that arr[index]>=x  */
+
 //brute force 
 int lowerBound(vector<int> arr, int n, int x) {
 	for(int i = 0 ; i < n ; i++)

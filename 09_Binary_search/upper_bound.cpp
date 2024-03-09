@@ -1,5 +1,5 @@
 
-
+/* upper bound : smallest index such that arr[index]>x  */
 //brute force 
 int upperBound(vector<int> &arr, int x, int n){
    for(int i = 0 ; i < n ; i ++)
