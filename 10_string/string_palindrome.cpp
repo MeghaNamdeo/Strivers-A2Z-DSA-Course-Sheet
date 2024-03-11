@@ -22,3 +22,22 @@ bool checkPalindrome(char str[]) {
 }
 
 //time complexity : O(n), space complexity : O(1)
+
+//using two pointer 
+bool checkPalindrome(string str) {
+    int start =0 , end = str.length()-1;
+   while(start<=end)
+   {
+       if(str[start]!=str[end])
+       {
+       return false;
+       }
+       start++;
+       end--;
+       
+   
+   }
+   return true;
+}
+//time complexity : O(n),space complexity : O(1)
+
