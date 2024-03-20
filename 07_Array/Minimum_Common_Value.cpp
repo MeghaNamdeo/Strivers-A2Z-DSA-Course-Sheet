@@ -66,4 +66,35 @@ SC : O(1)
 */
 
 //Optimal Approach : Two Pointer
+class Solution {
+public:
+ 
+    int getCommon(vector<int>& nums1, vector<int>& nums2) {
 
+        int n = nums1.size();
+        int m = nums2.size();
+        int i = 0; // nums1 
+        int j = 0; //nums2
+        int ans = -1;
+        
+
+        while( i < n && j < m)
+        {
+            if(nums1[i]==nums2[j])
+            {
+                ans = nums1[i];
+                break;
+            }
+            else if (nums1[i]<nums2[j])
+            i++;
+            else
+            j++;
+            
+        }
+        return ans;
+        
+    }
+};
+/* Tc : O(n+m)
+SC : O(1)
+*/
