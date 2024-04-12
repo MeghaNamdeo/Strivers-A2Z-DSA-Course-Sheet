@@ -16,6 +16,7 @@ bool isPrime(int n)
 
 	}
 	if(c==2)
+	
 	return true;
 	else
 	return false;

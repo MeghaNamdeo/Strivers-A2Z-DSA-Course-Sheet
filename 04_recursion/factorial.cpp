@@ -6,3 +6,11 @@ int factorial(int n) {
     // recursive call
     return n * factorial(n - 1);
 }
+
+int factorial(int n) {
+   
+    int res = 1, i; 
+    for (i = 2; i <= n; i++) 
+        res *= i; 
+    return res;
+}
