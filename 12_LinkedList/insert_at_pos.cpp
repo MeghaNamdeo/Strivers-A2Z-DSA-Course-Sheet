@@ -1,33 +1,3 @@
-class Solution {
-public:
-    // Function to insert a node at the beginning of the linked list.
-    Node* insertAtBegining(Node* head, int x) {
-        Node* newNode = new Node(x);
-        if (head == NULL) {
-            head = newNode;
-        } else {
-            newNode->next = head;
-            head = newNode;
-        }
-        return head;
-    }
-    
-    // Function to insert a node at the end of the linked list.
-    Node* insertAtEnd(Node* head, int x) {
-        Node* newNode = new Node(x);
-        if (head == NULL) {
-            head = newNode;
-        } else {
-            Node* temp = head;
-            while (temp->next != NULL) {
-                temp = temp->next;
-            }
-            temp->next = newNode;
-        }
-        return head;
-    }
-};
-//or
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -99,7 +69,46 @@ void insert_tail(Node* &head,int data)
     }
     
 }
+int len(Node*&head)
+{
+    int l=1;
+    Node*temp = head;
+    while(temp!=NULL)
+    {
+        l++;
+        temp=temp->next;
+    }
+    return l; 
+}
+Node * insert(Node * head,  int pos, int data) {
+   Node* newNode = new Node(data);
+   if (pos == 1) {
+        insert_head(head,data);
+    }
+    else if(pos==len(head))
+    {
+        insert_tail(head,data);
+    }
+    else{
 
+       int i =1;
+       Node* prev = head;
+       while(i<pos)
+       {
+           prev=prev->next;
+           i++;
+       }
+       Node* curr= prev->next;
+       
+       newNode->next=curr;  
+       prev->next= newNode;
+
+       
+
+
+   }
+   return head;
+}
 int main()
 {
    Node* first = new Node(10);
@@ -121,16 +130,22 @@ int main()
    cout<<"\nInsert at tail in LinkedList: "<<endl;
    insert_tail(first,1400);
    printLL(first);
+   cout<<"\nInsert at positoin LinkedList: "<<endl;
+   insert(first,5,89);
+   printLL(first);
 
     return 0;
 }
 /*
 output :
-Original LinkedList: 
-10 20 30 40 50 
+Original LinkedList:
+10 20 30 40 50
 
-Insert at tail in LinkedList: 
-10 20 30 40 50  1400
+Insert at tail in LinkedList:
+10 20 30 40 50 1400
+
+Insert at position 5 in LinkedList:
+10 20 30 40 89 50 1400
 
 Time Complexity: O(n), where n is the number of nodes in the linked list.
 Space Complexity: O(n)*/
