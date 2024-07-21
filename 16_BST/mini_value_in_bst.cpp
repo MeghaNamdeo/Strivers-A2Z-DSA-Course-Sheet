@@ -27,3 +27,22 @@ class Solution {
 TC : O(n)
 SC : O(n)
 */
+
+
+
+class Solution {
+  public:
+    //using iterative approach
+
+    int minValue(Node* root) {
+      Node* temp = root;
+      while(temp->left!=NULL)
+      {
+          temp=temp->left;
+      }
+      return temp->data;
+    }
+};/*
+TC: O(n)
+SC: O(1)
+*/
