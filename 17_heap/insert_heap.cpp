@@ -76,3 +76,31 @@ Printing heap :
 -1 110 100 60 50 45 
 -1 200 110 100 60 50 
 */
+
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Heap {
+private:
+    vector<int> arr;
+
+public:
+    Heap() {}
+
+    void insert(int val) {
+        arr.push_back(val);
+
+        int index = arr.size() ;
+
+        while (index > 1) {
+            int parentIndex = (index) / 2;
+            if (arr[index] > arr[parentIndex]) {
+                swap(arr[index], arr[parentIndex]);
+                index = parentIndex;
+            } else {
+                break;
+            }
+        }
+    }
+};
