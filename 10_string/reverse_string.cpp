@@ -27,7 +27,7 @@ for(;start<=end;)
 }
 return str;
 }
-
+*/
 
 //using stack
 #include <bits/stdc++.h> 
@@ -47,4 +47,4 @@ string reverseString(string str)
 	return ans;
 }
 /* TC :O(n) SC : O(n)*/
-*/
+
