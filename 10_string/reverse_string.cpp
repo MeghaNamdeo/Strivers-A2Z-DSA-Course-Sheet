@@ -1,4 +1,20 @@
 //brute force 
+string reverseWord(string str)
+    {
+      
+    string ans ="";  
+    int n = str.length()-1;
+    for(int i = n ; i>=0;i-- )
+    {
+        ans=ans+str[i];
+    }
+    return ans;
+    }
+};
+//TC :O(n)
+//SC:O(n)
+
+
 #include <bits/stdc++.h> 
 string reverseString(string str)
 {
